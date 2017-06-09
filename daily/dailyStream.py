@@ -8,7 +8,7 @@ import common.config
 import common.args
 from candlePrinter import CandlePrinter
 from dailyCandles import Candles
-from master.pivots import Pivots
+from pivots import Pivots
 import sys
 
 def main():
