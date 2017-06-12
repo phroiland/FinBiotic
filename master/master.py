@@ -90,6 +90,7 @@ def main():
             
         if msg_type == "pricing.Price":
             print price_to_string(msg)
+        
             sd = StreamingData(datetime.now(),currency_string(msg),
                                mid_string(msg),account_api,account_id,
                                's','1min',balance)

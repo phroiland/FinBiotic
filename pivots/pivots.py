@@ -35,18 +35,18 @@ class Pivots(object):
         self.weeklyPPRS = self.weeklyPivotsDF()
         
     def daily_pivot_point(self):
-        dailyHigh = self.df.iloc[-2]['High']
-        dailyLow = self.df.iloc[-2]['Low']
-        dailyClose = self.df.iloc[-2]['Close']
+        dailyHigh = self.df.iloc[-3]['High']
+        dailyLow = self.df.iloc[-3]['Low']
+        dailyClose = self.df.iloc[-3]['Close']
         dailyPP = (dailyHigh+dailyLow+dailyClose)/3
         return dailyPP
     
     def RL_1D(self):
-        RL_1D = (2*self.dailyPP) - self.df.iloc[-2]['Low']
+        RL_1D = (2*self.dailyPP) - self.df.iloc[-3]['Low']
         return RL_1D
     
     def SL_1D(self):
-        SL_1D = (2*self.dailyPP) - self.df.iloc[-2]['High']
+        SL_1D = (2*self.dailyPP) - self.df.iloc[-3]['High']
         return SL_1D
 
     def RL_2D(self):
@@ -66,18 +66,18 @@ class Pivots(object):
         return SL_3D     
 
     def weekly_pivot_point(self):
-        weeklyHigh = self.df.iloc[-6:-2]['High'].max()
-        weeklyLow = self.df.iloc[-6:-2]['Low'].min()
-        weeklyClose = self.df.iloc[-2]['Close']
+        weeklyHigh = self.df.iloc[-6:-3]['High'].max()
+        weeklyLow = self.df.iloc[-6:-3]['Low'].min()
+        weeklyClose = self.df.iloc[-3]['Close']
         weeklyPP = (weeklyHigh+weeklyLow+weeklyClose)/3
         return weeklyPP
     
     def RL_1W(self):
-        RL_1W = (2*self.weeklyPP) - self.df.iloc[-6:-2]['Low'].min()
+        RL_1W = (2*self.weeklyPP) - self.df.iloc[-6:-3]['Low'].min()
         return RL_1W
     
     def SL_1W(self):
-        SL_1W = (2*self.weeklyPP) - self.df.iloc[-6:-2]['High'].max()
+        SL_1W = (2*self.weeklyPP) - self.df.iloc[-6:-3]['High'].max()
         return SL_1W
 
     def RL_2W(self):

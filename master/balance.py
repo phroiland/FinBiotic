@@ -17,5 +17,5 @@ class Balance(object):
         keys = balance_response.get("account").__dict__.keys()
         values = balance_response.get("account").__dict__.values()
         details = zip(keys,values)
-        balance = round(details[17][1]*.02,2)
+        balance = round(details[17][1]*.01,2)
         return balance

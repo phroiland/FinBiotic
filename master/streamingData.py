@@ -49,6 +49,8 @@ class StreamingData(object):
         except:pass
         self.data['20 High Close'] = self.data['Close'].rolling(20).max()
         self.data['20 Low Close'] = self.data['Close'].rolling(20).min()
+        self.data['50 High Close'] = self.data['Close'].rolling(50).max()
+        self.data['50 Low Close'] = self.data['Close'].rolling(50).min()
         self.data['HL'] = self.data['High']-self.data['Low']
         self.data['HC'] = self.data['High']-self.data['Close']
         self.data['CL'] = self.data['Close']-self.data['Low']
@@ -60,14 +62,21 @@ class StreamingData(object):
         except:pass
         self.data['Account'] = self.balance
         try:
-            self.data['Default Units'] = int(100000)
+            self.data['Default Units'] = int(50000)
             self.data['Risk Adj Units'] = \
             self.data['Account']/self.data['$Volatility']
-            self.data['Lot Size'] = \
-            self.data[['Default Units','Risk Adj Units']].max(axis=1).astype(int)
-            self.data['Average Units'] = self.data['Lot Size'].rolling(20).mean()
-            if self.data['Lot Size'] > 200000:
-                self.data['Lot Size'] = self.data['Average Units']
+            self.data['Units'] = \
+            self.data[['Default Units','Risk Adj Units']].mean(axis=1).astype(int)
+            self.data['Average Units'] = self.data['Units'].rolling(20).mean()
+            """
+            if self.data.iloc[-1]['Units'] > 150000:
+                self.data['Risk Adj Units'] = self.data['Default Units']
+                self.data['Units'] = \
+                self.data[['Default Units','Risk Adj Units']].max(axis=1).astype(int)
+                self.data['Average Units'] = self.data['Units'].rolling(20).mean()
+            if self.data['Units'].shape[0] > 60:
+                self.data['Units'] = self.data['Average Units']
+            """
             #self.data['Lot Size'] = \
             #self.data['Account']/self.data['$Volatility']
             #self.data['Lot Size'] = self.data['Lot Size'].fillna(0.0).astype(int)
@@ -77,5 +86,5 @@ class StreamingData(object):
     def minuteData(self):
         minuteData = self.data[['Open','High','Low','Close','20 High Close',
                   '20 Low Close','True Range','N','Account','$Volatility',
-                  'Lot Size','Average Units']]
+                  'Units','Average Units']]
         return minuteData

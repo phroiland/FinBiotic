@@ -1,4 +1,4 @@
-def currency_string(price):
+def instrument_string(price):
 	return "{}".format(
 		price.instrument
 	)

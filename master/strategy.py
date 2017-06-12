@@ -7,26 +7,35 @@ Created on Fri Jun  9 12:19:05 2017
 """
 from resistance import Resistance
 from support import Support
-from breakout import Breakout
 from execute import Execute
 
 class Strategy(object):
     
-    def __init__(self, current, dfD, instrument, data, bid, ask, api, _id):
-        self.current = float(current)
-        self.dfD = dfD
-        self.instrument = instrument
-        self.data = data
-        self.bid = float(bid)
-        self.ask = float(ask)
+    def __init__(self, api, _id, instrument, dfD, bid, ask, breakout, pivot, 
+                 rl1, rl2, rl3, sl1, sl2, sl3, rate1, rate2):
         self.api = api
         self._id = _id
-    
+        self.instrument = instrument
+        self.dfD = dfD
+        self.bid = float(bid)
+        self.ask = float(ask)
+        self.units = breakout
+        self.pivot = pivot
+        self.rl1 = rl1
+        self.rl2 = rl2
+        self.rl3 = rl3
+        self.sl1 = sl1
+        self.sl2 = sl2
+        self.sl3 = sl3
+        self.rate1 = rate1
+        self.rate2 = rate2
+        
     def res_check(self):
-        if self.current > self.dfD.iloc[-1]['Daily Pivot Point']:
+        if self.bid > self.dfD.iloc[-1]['Daily Pivot Point']:
             print '**** Checking Resistance Pivots ****'
-            res = Resistance(self.instrument,self.current,self.dfD,self.data,
-                             self.bid,self.ask)
+            res = Resistance(self.instrument,self.bid,self.ask,self.dfD,
+                             self.units,self.pivot,self.rl1,self.rl2,self.rl3,
+                             self.rate1,self.rate2)
             if res.resistance() is None:pass
             else:
                 resUnits, resProfit, resLoss = res.resistance()
@@ -35,10 +44,11 @@ class Strategy(object):
                 resex.trade()
     
     def sup_check(self):
-        if self.current < self.dfD.iloc[-1]['Daily Pivot Point']:
+        if self.ask < self.dfD.iloc[-1]['Daily Pivot Point']:
             print '**** Checking Support Pivots ****'
-            sup = Support(self.instrument,self.current,self.dfD,self.data,
-                             self.bid,self.ask)
+            sup = Support(self.instrument,self.bid,self.ask,self.dfD,
+                          self.units,self.pivot,self.sl1,self.sl2,self.sl3,
+                             self.rate1,self.rate2)
             if sup.support() is None:pass
             else:
                 supUnits, supProfit, supLoss = sup.support()
@@ -46,37 +56,3 @@ class Strategy(object):
                                 supProfit,supLoss)
                 supex.trade()
     
-    def long_breakout(self):
-        if self.current > self.dfD.iloc[-1]['Resistance Level 3']:
-            print '**** Checking Breakout - Resistance ****'
-            try:
-                bo = Breakout(self.api,self._id,self.instrument,self.current,
-                          self.data,self.dfD)
-                if bo.res_breakout() is None:pass
-            except Exception as e: print(e)
-            else:
-                try:
-                    boUnits, boProfit, boLoss = \
-                    bo.res_breakout()
-                    boex = Execute(self.api,self._id,self.instrument,boUnits,
-                                   boProfit,boLoss)
-                    boex.trade()
-                except Exception as e: print(e)
-            return
-        
-    def short_breakout(self):
-        if self.current < self.dfD.iloc[-1]['Support Level 3']:
-            print '**** Checking Breakout - Support ****'
-            try:
-                bo = Breakout(self.api,self._id,self.instrument,self.current,
-                          self.data,self.dfD)
-                if bo.sup_breakout() is None:pass
-            except Exception as e: print(e)
-            else:
-                try:
-                    boUnits, boProfit, boLoss = \
-                    bo.sup_breakout()
-                    boex = Execute(self.api,self._id,self.instrument,boUnits,
-                                   boProfit,boLoss)
-                    boex.trade()
-                except Exception as e: print(e)
