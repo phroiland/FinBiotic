@@ -27,7 +27,7 @@ from spreads import Spreads
 from strategy import Strategy
 from pivotImports import PivotImports
 from view import mid_string, heartbeat_to_string, instrument_string
-from view import bid_string, ask_string, price_to_string
+#from view import bid_string, ask_string, price_to_string
 
 def main(): 
     print "------ System online -------", datetime.now()
@@ -92,7 +92,7 @@ def main():
         if msg_type == "pricing.Price":
             sd = StreamingData(datetime.now(),instrument_string(msg),
                                mid_string(msg),account_api,account_id,
-                               's','1min',balance)
+                               's','5min',balance)
             df = df.append(sd.df())
             sd.resample(df)
             print "df:",df.shape[0], "minuteData:",sd.minuteData().shape[0]
@@ -116,21 +116,21 @@ def main():
                     try:
                         b = Breakout(sd.minuteData())
                         breakout = b.breakout()
-                        print 'Breakout Units:',breakout
+                        #print 'Breakout Units:',breakout
                         
-                        s = Spreads(dfD,bid_string(msg),ask_string(msg))
+                        s = Spreads(dfD,mid_string(msg))
                         pivot, rl1, rl2, rl3, sl1, sl2, sl3 = s.spreads()
                         rate1, rate2 = s.spreads_out()
                         
                         strat = Strategy(account_api,account_id,
                                          instrument_string(msg),dfD,
-                                         bid_string(msg),ask_string(msg),
-                                         breakout,pivot,rl1,rl2,rl3,
-                                         sl1,sl2,sl3,rate1,rate2)
+                                         mid_string(msg),breakout,pivot,
+                                         rl1,rl2,rl3,sl1,sl2,sl3,rate1,rate2)
                         strat.res_check()
                         strat.sup_check()
 
-                    except Exception as e: print(e)
+                    #except Exception as e: print(e)
+                    except:continue
                         
 if __name__ == "__main__":
     main()
