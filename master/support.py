@@ -8,11 +8,12 @@ Created on Wed Jun  7 21:53:58 2017
 
 class Support(object):
     
-    def __init__(self, instrument, bid, ask, dfD, units, pivot, sl1, sl2, sl3,
+    def __init__(self, instrument, mid, dfD, units, pivot, sl1, sl2, sl3,
                              rate1, rate2):
         self.instrument = instrument
-        self.bid = bid
-        self.ask = ask
+        self.mid = mid
+        #self.bid = bid
+        #self.ask = ask
         self.dfD = dfD
         self.units = units
         self.pivot = pivot
@@ -24,67 +25,67 @@ class Support(object):
   
     def support(self):
         if (
-                self.ask < self.pivot and self.bid > self.sl1 and \
+                self.mid < self.pivot and self.mid > self.sl1 and \
                 self.units is not None and self.units > 0 and \
                 self.rate1 > .2 and self.rate1 < .4
             ):
             print '*** Long PP_SL1 ***', self.units
-            profit = self.pivot
-            loss = self.sl1
+            profit = self.pivot-.00025
+            loss = self.sl1-.00025
             return self.units, profit, loss
             
         elif (
-                self.ask < self.pivot and self.bid > self.sl1 and \
+                self.mid < self.pivot and self.mid > self.sl1 and \
                 self.units is not None and self.units < 0 and \
                 self.rate2 > .2 and self.rate2 < .4
             ):
             print '*** Short PP_SL1 ***', self.units
-            profit = self.sl1
-            loss = self.pivot
+            profit = self.sl1+.00025
+            loss = self.pivot+.00025
             return self.units, profit, loss
         
         elif (
-                self.ask < self.sl1 and self.bid < self.sl2 and \
+                self.mid < self.sl1 and self.mid > self.sl2 and \
                 self.units is not None and self.units > 0 and \
                 self.rate1 > .2 and self.rate1 < .4
             ):
             print '*** Long SL1_SL2 ***', self.units
-            profit = self.sl1
-            loss = self.sl2
+            profit = self.sl1-.00025
+            loss = self.sl2-.00025
             return self.units, profit, loss
         
         elif (
-                self.ask < self.sl1 and self.bid < self.sl2 and \
+                self.mid < self.sl1 and self.mid > self.sl2 and \
                 self.units is not None and self.units < 0 and \
                 self.rate2 > .2 and self.rate2 < .4
             ):
             print '*** Short SL1_SL2 ***', self.units
-            profit = self.sl2
-            loss = self.sl1
+            profit = self.sl2+.00025
+            loss = self.sl1+.00025
             return self.units, profit, loss 
         
         elif (
-                self.ask < self.sl2 and self.bid < self.sl3 and \
+                self.mid < self.sl2 and self.mid > self.sl3 and \
                 self.units is not None and self.units > 0 and \
                 self.rate1 > .2 and self.rate1 < .4
             ):
             print '*** Long SL1_SL2 ***', self.units
-            profit = self.sl2
-            loss = self.sl3
+            profit = self.sl2-.00025
+            loss = self.sl3-.00025
             return self.units, profit, loss
         
         elif (
-                self.ask < self.sl2 and self.bid < self.sl3 and \
+                self.mid < self.sl2 and self.mid > self.sl3 and \
                 self.units is not None and self.units < 0 and \
                 self.rate2 > .2 and self.rate2 < .4
             ):
             print '*** Short SL1_SL2 ***', self.units
-            profit = self.sl3
-            loss = self.sl2
+            profit = self.sl3+.00025
+            loss = self.sl2+.00025
             return self.units, profit, loss 
         
         elif (
-                self.ask < self.sl3 and self.units is not None and \
+                self.mid < self.sl3 and self.units is not None and \
                 self.units > 0
             ):
             print '*** Long SL3 Breakout ***', self.units
@@ -93,7 +94,7 @@ class Support(object):
             return self.units, profit, loss
         
         elif (
-                self.bid < self.sl3 and self.units is not None and \
+                self.mid < self.sl3 and self.units is not None and \
                 self.units < 0
             ):
             print '*** Short RL3 Breakout ***', self.units

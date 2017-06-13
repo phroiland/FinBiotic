@@ -5,115 +5,102 @@ Created on Wed Jun  7 21:53:58 2017
 
 @author: jonfroiland
 """
+
 class Support(object):
     
-    def __init__(self, instrument, current, dfD, units, bid, ask):
+    def __init__(self, instrument, mid, dfD, units, pivot, sl1, sl2, sl3,
+                             rate1, rate2):
         self.instrument = instrument
-        self.current = float(current)
+        self.mid = mid
+        #self.bid = bid
+        #self.ask = ask
         self.dfD = dfD
         self.units = units
-        self.bid = float(bid)
-        self.ask = float(ask)
-        
+        self.pivot = pivot
+        self.sl1 = sl1
+        self.sl2 = sl2
+        self.sl3 = sl3
+        self.rate1 = rate1
+        self.rate2 = rate2
+  
     def support(self):
         if (
-                self.current<self.dfD.iloc[-1]['Daily Pivot Point'].round(5) and \
-                self.current>self.dfD.iloc[-1]['Support Level 1']
+                self.mid < self.pivot and self.mid > self.sl1 and \
+                self.units is not None and self.units > 0 and \
+                self.rate1 > .2 and self.rate1 < .4
             ):
-            over = self.current - self.dfD.iloc[-1]['Support Level 1']
-            under = self.dfD.iloc[-1]['Daily Pivot Point'] - self.current
-            spread = self.dfD.iloc[-1]['Daily Pivot Point'] - \
-                    self.dfD.iloc[-1]['Support Level 1']
-            rate1 = over/spread
-            rate2 = under/spread
-            entryLow = self.units.iloc[-1]['N']/spread
-            entryHigh = (2*self.units.iloc[-1]['N'])/spread
-            if rate1 > entryLow and rate1 < entryHigh:
-                units = self.units.iloc[-1]['Lot Size'].astype(int)
-                loss = self.dfD.iloc[-1]['Support Level 1'] \
-                + self.units.iloc[-1]['N']
-                loss = loss.round(5)
-                profit = self.dfD.iloc[-1]['Daily Pivot Point'] \
-                - self.units.iloc[-1]['N']
-                profit = profit.round(5)
-                print 'Long PP_SL1', units
-                return units, profit, loss
-            elif rate2 > entryLow and rate2 < entryHigh:
-                units = self.units.iloc[-1]['Lot Size'].astype(int)
-                units = units*-1
-                profit = self.dfD.iloc[-1]['Support Level 1'] \
-                + self.units.iloc[-1]['N']
-                profit = profit.round(5)
-                loss = self.dfD.iloc[-1]['Daily Pivot Point'] \
-                - self.units.iloc[-1]['N']
-                loss = loss.round(5)
-                print 'Short PP_SL1', units
-                return units, profit, loss
+            print '*** Long PP_SL1 ***', self.units
+            profit = self.pivot-.00025
+            loss = self.sl1-.00025
+            return self.units, profit, loss
+            
         elif (
-                self.current<self.dfD.iloc[-1]['Support Level 1'] and \
-                self.current>self.dfD.iloc[-1]['Support Level 2']
+                self.mid < self.pivot and self.mid > self.sl1 and \
+                self.units is not None and self.units < 0 and \
+                self.rate2 > .2 and self.rate2 < .4
             ):
-            over = self.current - self.dfD.iloc[-1]['Support Level 2']
-            under = self.dfD.iloc[-1]['Support Level 1'] - self.current
-            spread = self.dfD.iloc[-1]['Support Level 1'] - \
-                    self.dfD.iloc[-1]['Support Level 2']
-            rate1 = over/spread
-            rate2 = under/spread
-            entryLow = self.units.iloc[-1]['N']/spread
-            entryHigh = (2*self.units.iloc[-1]['N'])/spread
-            if rate1 > entryLow and rate1 < entryHigh:
-                units = self.units.iloc[-1]['Lot Size'].astype(int)
-                loss = self.dfD.iloc[-1]['Support Level 2'] \
-                + self.units.iloc[-1]['N']
-                loss = loss.round(5)
-                profit = self.dfD.iloc[-1]['Support Level 1'] \
-                - self.units.iloc[-1]['N']
-                profit = profit.round(5)
-                print 'Long SL1_SL2', units
-                return units, profit, loss
-            elif rate2 > entryLow and rate2 < entryHigh:
-                units = self.units.iloc[-1]['Lot Size'].astype(int)
-                units = units*-1
-                profit = self.dfD.iloc[-1]['Support Level 2'] \
-                + self.units.iloc[-1]['N']
-                profit = profit.round(5)
-                loss = self.dfD.iloc[-1]['Support Level 1'] \
-                - self.units.iloc[-1]['N']
-                loss = loss.round(5)
-                print 'Short SL1_SL2', units
-                return units, profit, loss
+            print '*** Short PP_SL1 ***', self.units
+            profit = self.sl1+.00025
+            loss = self.pivot+.00025
+            return self.units, profit, loss
+        
         elif (
-                self.current<self.dfD.iloc[-1]['Support Level 2'] and \
-                self.current>self.dfD.iloc[-1]['Support Level 3']
+                self.mid < self.sl1 and self.mid > self.sl2 and \
+                self.units is not None and self.units > 0 and \
+                self.rate1 > .2 and self.rate1 < .4
             ):
-            over = self.current - self.dfD.iloc[-1]['Support Level 3']
-            under = self.dfD.iloc[-1]['Support Level 2'] - self.current
-            spread = self.dfD.iloc[-1]['Support Level 2'] - \
-                    self.dfD.iloc[-1]['Support Level 3']
-            rate1 = over/spread
-            rate2 = under/spread
-            entryLow = self.units.iloc[-1]['N']/spread
-            entryHigh = (2*self.units.iloc[-1]['N'])/spread
-            if rate1 > entryLow and rate1 < entryHigh:
-                units = self.units.iloc[-1]['Lot Size'].astype(int)
-                loss = self.dfD.iloc[-1]['Support Level 3'] \
-                + self.units.iloc[-1]['N']
-                loss = loss.round(5)
-                profit = self.dfD.iloc[-1]['Support Level 2'] \
-                - self.units.iloc[-1]['N']
-                profit = profit.round(5)
-                print 'Long SL2_SL3', units
-                return units, profit, loss
-            elif rate2 > entryLow and rate2 < entryHigh:
-                units = self.units.iloc[-1]['Lot Size'].astype(int)
-                profit = self.dfD.iloc[-1]['Support Level 3'] \
-                + self.units.iloc[-1]['N']
-                profit = profit.round(5)
-                loss = self.dfD.iloc[-1]['Support Level 2'] \
-                - self.units.iloc[-1]['N']
-                loss = loss.round(5)
-                units = units*-1
-                print 'Short SL2_SL3', units
-                return units, profit, loss
+            print '*** Long SL1_SL2 ***', self.units
+            profit = self.sl1-.00025
+            loss = self.sl2-.00025
+            return self.units, profit, loss
+        
+        elif (
+                self.mid < self.sl1 and self.mid > self.sl2 and \
+                self.units is not None and self.units < 0 and \
+                self.rate2 > .2 and self.rate2 < .4
+            ):
+            print '*** Short SL1_SL2 ***', self.units
+            profit = self.sl2+.00025
+            loss = self.sl1+.00025
+            return self.units, profit, loss 
+        
+        elif (
+                self.mid < self.sl2 and self.mid > self.sl3 and \
+                self.units is not None and self.units > 0 and \
+                self.rate1 > .2 and self.rate1 < .4
+            ):
+            print '*** Long SL1_SL2 ***', self.units
+            profit = self.sl2-.00025
+            loss = self.sl3-.00025
+            return self.units, profit, loss
+        
+        elif (
+                self.mid < self.sl2 and self.mid > self.sl3 and \
+                self.units is not None and self.units < 0 and \
+                self.rate2 > .2 and self.rate2 < .4
+            ):
+            print '*** Short SL1_SL2 ***', self.units
+            profit = self.sl3+.00025
+            loss = self.sl2+.00025
+            return self.units, profit, loss 
+        
+        elif (
+                self.mid < self.sl3 and self.units is not None and \
+                self.units > 0
+            ):
+            print '*** Long SL3 Breakout ***', self.units
+            profit = self.bid - .002
+            loss = self.sl3
+            return self.units, profit, loss
+        
+        elif (
+                self.mid < self.sl3 and self.units is not None and \
+                self.units < 0
+            ):
+            print '*** Short RL3 Breakout ***', self.units
+            profit = self.sl3
+            loss = self.ask + .001
+            return self.units, profit, loss
+        
         else:
             return None

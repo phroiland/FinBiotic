@@ -62,12 +62,12 @@ class StreamingData(object):
         except:pass
         self.data['Account'] = self.balance
         try:
-            self.data['Default Units'] = int(50000)
+            self.data['Default Units'] = int(100000)
             self.data['Risk Adj Units'] = \
             self.data['Account']/self.data['$Volatility']
             self.data['Units'] = \
             self.data[['Default Units','Risk Adj Units']].mean(axis=1).astype(int)
-            self.data['Average Units'] = self.data['Units'].rolling(20).mean()
+            #self.data['Average Units'] = self.data['Units'].rolling(20).mean()
             """
             if self.data.iloc[-1]['Units'] > 150000:
                 self.data['Risk Adj Units'] = self.data['Default Units']
@@ -85,6 +85,7 @@ class StreamingData(object):
     
     def minuteData(self):
         minuteData = self.data[['Open','High','Low','Close','20 High Close',
-                  '20 Low Close','True Range','N','Account','$Volatility',
-                  'Units','Average Units']]
+                                '50 High Close','20 Low Close','50 Low Close',
+                                'True Range','N','Account','$Volatility',
+                                'Units']]
         return minuteData

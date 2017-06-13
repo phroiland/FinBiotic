@@ -11,14 +11,15 @@ from execute import Execute
 
 class Strategy(object):
     
-    def __init__(self, api, _id, instrument, dfD, bid, ask, breakout, pivot, 
+    def __init__(self, api, _id, instrument, dfD, mid, breakout, pivot, 
                  rl1, rl2, rl3, sl1, sl2, sl3, rate1, rate2):
         self.api = api
         self._id = _id
         self.instrument = instrument
         self.dfD = dfD
-        self.bid = float(bid)
-        self.ask = float(ask)
+        self.mid = float(mid)
+        #self.bid = float(bid)
+        #self.ask = float(ask)
         self.units = breakout
         self.pivot = pivot
         self.rl1 = rl1
@@ -31,28 +32,28 @@ class Strategy(object):
         self.rate2 = rate2
         
     def res_check(self):
-        if self.bid > self.dfD.iloc[-1]['Daily Pivot Point']:
+        if self.mid > self.dfD.iloc[-1]['Daily Pivot Point']:
             print '**** Checking Resistance Pivots ****'
-            res = Resistance(self.instrument,self.bid,self.ask,self.dfD,
+            res = Resistance(self.instrument,self.mid,self.dfD,
                              self.units,self.pivot,self.rl1,self.rl2,self.rl3,
                              self.rate1,self.rate2)
-            if res.resistance() is None:pass
-            else:
+            print res.resistance()
+            try:
                 resUnits, resProfit, resLoss = res.resistance()
                 resex = Execute(self.api,self._id,self.instrument,resUnits,
                                 resProfit,resLoss)
                 resex.trade()
-    
+            except Exception as e: print(e)
     def sup_check(self):
-        if self.ask < self.dfD.iloc[-1]['Daily Pivot Point']:
+        if self.mid < self.dfD.iloc[-1]['Daily Pivot Point']:
             print '**** Checking Support Pivots ****'
-            sup = Support(self.instrument,self.bid,self.ask,self.dfD,
+            sup = Support(self.instrument,self.mid,self.dfD,
                           self.units,self.pivot,self.sl1,self.sl2,self.sl3,
                              self.rate1,self.rate2)
-            if sup.support() is None:pass
-            else:
+            print sup.support()
+            try:
                 supUnits, supProfit, supLoss = sup.support()
                 supex = Execute(self.api,self._id,self.instrument,supUnits,
                                 supProfit,supLoss)
                 supex.trade()
-    
+            except Exception as e: print(e)

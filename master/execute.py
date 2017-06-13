@@ -14,8 +14,8 @@ class Execute(object):
         self.account_id = account_id
         self.instrument = instrument
         self.units = units
-        self.profit = profit
-        self.loss = loss
+        self.profit = float(round(profit,5))
+        self.loss = float(round(loss,5))
         
     def trade(self):
         response = self.api.order.market(

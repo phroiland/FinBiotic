@@ -15,7 +15,7 @@ class Breakout(object):
                 self.data.shape[0]>50 and \
                 self.data.iloc[-1]['High'] > \
                 self.data.iloc[-2]['20 High Close'] and \
-                self.data.iloc[-1]['High'] < \
+                self.data.iloc[-1]['High'] > \
                 self.data.iloc[-2]['50 High Close']
             ):
             print '*** Long 20/50 Breakout ***'
