@@ -22,10 +22,12 @@ import settings
 # Data, Price, and Strategy Imports
 from streamingData import StreamingData
 from balance import Balance
+from breakout import Breakout
+from spreads import Spreads
 from strategy import Strategy
 from pivotImports import PivotImports
-from view import mid_string, heartbeat_to_string, currency_string
-from view import bid_string, ask_string, price_to_string
+from view import mid_string, heartbeat_to_string, instrument_string
+#from view import bid_string, ask_string, price_to_string
 
 def main(): 
     print "------ System online -------", datetime.now()
@@ -78,9 +80,8 @@ def main():
     p = PivotImports(sys.argv[2], datetime.now().date())
     dfD = p.daily()
     #dfW = p.weekly()
-    
-    b = Balance(account_api, account_id)
-    balance = b.balance()
+    bal = Balance(account_api, account_id)
+    balance = bal.balance()
     
     df = pd.DataFrame([])
         
@@ -89,17 +90,15 @@ def main():
             print(heartbeat_to_string(msg))
             
         if msg_type == "pricing.Price":
-            print price_to_string(msg)
-        
-            sd = StreamingData(datetime.now(),currency_string(msg),
+            sd = StreamingData(datetime.now(),instrument_string(msg),
                                mid_string(msg),account_api,account_id,
-                               's','1min',balance)
+                               's','5min',balance)
             df = df.append(sd.df())
             sd.resample(df)
             print "df:",df.shape[0], "minuteData:",sd.minuteData().shape[0]
-            print sd.minuteData(),'\n'
+            #print sd.minuteData(),'\n'
             
-            if sd.minuteData().shape[0]<20:pass
+            if sd.minuteData().shape[0]<20:continue
             
             else:
                 client = oandapyV20.API(settings.ACCESS_TOKEN)
@@ -111,20 +110,27 @@ def main():
                     openTrades.append(trades)    
                 print 'Open Trades', openTrades
                 
-                if currency_string(msg) in openTrades:continue
+                if instrument_string(msg) in openTrades:continue
                 
                 else:
                     try:
-                        strat = Strategy(mid_string(msg),dfD,
-                                         currency_string(msg),sd.minuteData(),
-                                         bid_string(msg),ask_string(msg),
-                                         account_api,account_id)
+                        b = Breakout(sd.minuteData())
+                        breakout = b.breakout()
+                        #print 'Breakout Units:',breakout
+                        
+                        s = Spreads(dfD,mid_string(msg))
+                        pivot, rl1, rl2, rl3, sl1, sl2, sl3 = s.spreads()
+                        rate1, rate2 = s.spreads_out()
+                        
+                        strat = Strategy(account_api,account_id,
+                                         instrument_string(msg),dfD,
+                                         mid_string(msg),breakout,pivot,
+                                         rl1,rl2,rl3,sl1,sl2,sl3,rate1,rate2)
                         strat.res_check()
                         strat.sup_check()
-                        strat.long_breakout()
-                        strat.short_breakout()
-                        
-                    except Exception as e: print(e)
+
+                    #except Exception as e: print(e)
+                    except:continue
                         
 if __name__ == "__main__":
     main()
