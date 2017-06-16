@@ -18,8 +18,6 @@ class Strategy(object):
         self.instrument = instrument
         self.dfD = dfD
         self.mid = float(mid)
-        #self.bid = float(bid)
-        #self.ask = float(ask)
         self.units = breakout
         self.pivot = pivot
         self.rl1 = rl1
@@ -30,30 +28,41 @@ class Strategy(object):
         self.sl3 = sl3
         self.rate1 = rate1
         self.rate2 = rate2
-        
+
     def res_check(self):
-        if self.mid > self.dfD.iloc[-1]['Daily Pivot Point']:
+        if self.mid > self.dfD.iloc[-1]['D Pivot Point']:
             print '**** Checking Resistance Pivots ****'
             res = Resistance(self.instrument,self.mid,self.dfD,
                              self.units,self.pivot,self.rl1,self.rl2,self.rl3,
                              self.rate1,self.rate2)
-            print res.resistance()
+            #print res.resistance()
             try:
-                resUnits, resProfit, resLoss = res.resistance()
-                resex = Execute(self.api,self._id,self.instrument,resUnits,
-                                resProfit,resLoss)
+                resUnits, resLoss = res.resistance()
+                resUnits = resUnits*-1
+                
+                resLoss = float(round(resLoss,5))
+                dif = self.mid - resLoss
+                resLoss = self.mid + dif
+                
+                resex = Execute(self.api,self._id,self.instrument,resUnits,resLoss)
                 resex.trade()
-            except Exception as e: print(e)
+            except:pass
+    
     def sup_check(self):
-        if self.mid < self.dfD.iloc[-1]['Daily Pivot Point']:
+        if self.mid < self.dfD.iloc[-1]['D Pivot Point']:
             print '**** Checking Support Pivots ****'
             sup = Support(self.instrument,self.mid,self.dfD,
                           self.units,self.pivot,self.sl1,self.sl2,self.sl3,
                              self.rate1,self.rate2)
-            print sup.support()
+            #print sup.support()
             try:
-                supUnits, supProfit, supLoss = sup.support()
-                supex = Execute(self.api,self._id,self.instrument,supUnits,
-                                supProfit,supLoss)
+                supUnits, supLoss = sup.support()
+                supUnits = supUnits*-1
+                    
+                supLoss = float(round(supLoss,5))
+                dif = self.mid - supLoss
+                supLoss = self.mid + dif
+                
+                supex = Execute(self.api,self._id,self.instrument,supUnits,supLoss)
                 supex.trade()
-            except Exception as e: print(e)
+            except:pass

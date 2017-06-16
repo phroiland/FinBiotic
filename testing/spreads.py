@@ -11,23 +11,21 @@ class Spreads(object):
     def __init__(self, dfD, mid):
         self.dfD = dfD
         self.mid = float(mid)
-        #self.bid = float(bid)
-        #self.ask = float(ask)
         self.pivot,self.rl1,self.rl2,self.rl3,self.sl1,self.sl2,self.sl3 = \
         self.spreads()
         
     def spreads(self):
         # Do not change or you will get single positioner index fault.
-        pivot = self.dfD.iloc[-1]['Daily Pivot Point'].round(5)
-        rl1 = self.dfD.iloc[-1]['Resistance Level 1'].round(5)
-        rl2 = self.dfD.iloc[-1]['Resistance Level 2'].round(5)
-        rl3 = self.dfD.iloc[-1]['Resistance Level 3'].round(5)
-        sl1 = self.dfD.iloc[-1]['Support Level 1'].round(5)
-        sl2 = self.dfD.iloc[-1]['Support Level 2'].round(5)
-        sl3 = self.dfD.iloc[-1]['Support Level 3'].round(5)
+        pivot = self.dfD.iloc[-1]['D Pivot Point'].round(5)
+        rl1 = self.dfD.iloc[-1]['Resistance L1'].round(5)
+        rl2 = self.dfD.iloc[-1]['Resistance L2'].round(5)
+        rl3 = self.dfD.iloc[-1]['Resistance L3'].round(5)
+        sl1 = self.dfD.iloc[-1]['Support L1'].round(5)
+        sl2 = self.dfD.iloc[-1]['Support L2'].round(5)
+        sl3 = self.dfD.iloc[-1]['Support L3'].round(5)
         return pivot, rl1, rl2, rl3, sl1, sl2, sl3
         
-    def spreads_out(self):
+    def spreadRates(self):
         if self.mid > self.pivot and self.mid < self.rl1:
             over = self.mid - self.pivot
             spread = self.rl1 - self.pivot

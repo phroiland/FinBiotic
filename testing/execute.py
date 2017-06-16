@@ -9,13 +9,12 @@ from order_response import print_order_create_response_transactions
 
 class Execute(object):
     
-    def __init__(self, api, account_id, instrument, units, profit, loss):
+    def __init__(self, api, account_id, instrument, units, loss):
         self.api = api
         self.account_id = account_id
         self.instrument = instrument
         self.units = units
-        self.profit = float(round(profit,5))
-        self.loss = float(round(loss,5))
+        self.loss = loss
         
     def trade(self):
         response = self.api.order.market(
@@ -24,6 +23,18 @@ class Execute(object):
                 units=self.units
         )
         tradeID = response.get('lastTransactionID')
+        keys = response.get('orderFillTransaction').__dict__.keys()
+        values = response.get('orderFillTransaction').__dict__.values()
+        orderFill = zip(keys,values)
+        #print orderFill[6]
+        if self.units > 0:
+            profit = float(round(orderFill[6][1] + .0005,5))
+            loss = float(round(orderFill[6][1] - .005,self.unit,5))
+            #print 'LONG PROFIT:', profit
+        else:
+            profit = float(round(orderFill[6][1] - .0005,5))
+            loss = float(round(orderFill[6][1] + .005,self.unit,5))
+            #print 'SHORT PROFIT:', profit
         print("Response: {} ({})".format(
                 response.status,response.reason))
         print("")
@@ -33,19 +44,19 @@ class Execute(object):
                 self.account_id,
                 instrument=self.instrument,
                 tradeID=tradeID,
-                price=self.profit
+                price=profit
         )
         
         print("Profit Response: {} ({})".format(
                 profit_response.status,profit_response.reason))
         print("")
         print_order_create_response_transactions(profit_response)
-
+        
         stop_response = self.api.order.stop_loss(
                 self.account_id,
                 instrument=self.instrument,
                 tradeID=tradeID,
-                price=self.loss
+                price=loss
         )
         print("Loss Response: {} ({})".format(
                 stop_response.status,stop_response.reason))

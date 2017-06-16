@@ -67,19 +67,6 @@ class StreamingData(object):
             self.data['Account']/self.data['$Volatility']
             self.data['Units'] = \
             self.data[['Default Units','Risk Adj Units']].mean(axis=1).astype(int)
-            #self.data['Average Units'] = self.data['Units'].rolling(20).mean()
-            """
-            if self.data.iloc[-1]['Units'] > 150000:
-                self.data['Risk Adj Units'] = self.data['Default Units']
-                self.data['Units'] = \
-                self.data[['Default Units','Risk Adj Units']].max(axis=1).astype(int)
-                self.data['Average Units'] = self.data['Units'].rolling(20).mean()
-            if self.data['Units'].shape[0] > 60:
-                self.data['Units'] = self.data['Average Units']
-            """
-            #self.data['Lot Size'] = \
-            #self.data['Account']/self.data['$Volatility']
-            #self.data['Lot Size'] = self.data['Lot Size'].fillna(0.0).astype(int)
         except:pass
         return self.data
     

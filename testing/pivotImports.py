@@ -10,18 +10,17 @@ import os, os.path
 import settings
 
 class PivotImports(object):
-    def __init__(self, instrument, date):
+    def __init__(self, instrument):
         self.instrument = instrument
-        self.date = date
         
     def daily(self):
-        dfD = pd.read_csv(os.path.join(settings.CSV_DIR,"%s_%s_%s.csv" % (
-            self.instrument,'DailyPivots',self.date)))
+        dfD = pd.read_csv(os.path.join(settings.CSV_DIR,"%s_%s.csv" % (
+            self.instrument,'DailyPivots')))
         print dfD
         return dfD
 
     def weekly(self):
-        dfW = pd.read_csv(os.path.join(settings.CSV_DIR,"%s_%s_%s.csv" % (
-                self.instrument,'WeeklyPivots',self.date)))
+        dfW = pd.read_csv(os.path.join(settings.CSV_DIR,"%s_%s.csv" % (
+                self.instrument,'WeeklyPivots')))
         print dfW
         return dfW

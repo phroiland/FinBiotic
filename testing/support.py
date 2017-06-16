@@ -12,8 +12,6 @@ class Support(object):
                              rate1, rate2):
         self.instrument = instrument
         self.mid = mid
-        #self.bid = bid
-        #self.ask = ask
         self.dfD = dfD
         self.units = units
         self.pivot = pivot
@@ -29,78 +27,70 @@ class Support(object):
                 self.units is not None and self.units > 0 and \
                 self.rate1 > .2 and self.rate1 < .4
             ):
-            print '*** Long PP_SL1 ***', self.units
-            profit = self.pivot-.00025
-            loss = self.sl1-.00025
-            return self.units, profit, loss
+            #print '*** Long PP_SL1 ***', self.units
+            loss = self.sl1 - .00025
+            return self.units, loss
             
         elif (
                 self.mid < self.pivot and self.mid > self.sl1 and \
                 self.units is not None and self.units < 0 and \
                 self.rate2 > .2 and self.rate2 < .4
             ):
-            print '*** Short PP_SL1 ***', self.units
-            profit = self.sl1+.00025
-            loss = self.pivot+.00025
-            return self.units, profit, loss
+            #print '*** Short PP_SL1 ***', self.units
+            loss = self.pivot + .00025
+            return self.units, loss
         
         elif (
                 self.mid < self.sl1 and self.mid > self.sl2 and \
                 self.units is not None and self.units > 0 and \
                 self.rate1 > .2 and self.rate1 < .4
             ):
-            print '*** Long SL1_SL2 ***', self.units
-            profit = self.sl1-.00025
-            loss = self.sl2-.00025
-            return self.units, profit, loss
+            #print '*** Long SL1_SL2 ***', self.units
+            loss = self.sl2 - .00025
+            return self.units, loss
         
         elif (
                 self.mid < self.sl1 and self.mid > self.sl2 and \
                 self.units is not None and self.units < 0 and \
                 self.rate2 > .2 and self.rate2 < .4
             ):
-            print '*** Short SL1_SL2 ***', self.units
-            profit = self.sl2+.00025
-            loss = self.sl1+.00025
-            return self.units, profit, loss 
+            #print '*** Short SL1_SL2 ***', self.units
+            loss = self.sl1 + .00025
+            return self.units, loss 
         
         elif (
                 self.mid < self.sl2 and self.mid > self.sl3 and \
                 self.units is not None and self.units > 0 and \
                 self.rate1 > .2 and self.rate1 < .4
             ):
-            print '*** Long SL1_SL2 ***', self.units
-            profit = self.sl2-.00025
-            loss = self.sl3-.00025
-            return self.units, profit, loss
+            #print '*** Long SL1_SL2 ***', self.units
+            loss = self.sl3 - .00025
+            return self.units, loss
         
         elif (
                 self.mid < self.sl2 and self.mid > self.sl3 and \
                 self.units is not None and self.units < 0 and \
                 self.rate2 > .2 and self.rate2 < .4
             ):
-            print '*** Short SL1_SL2 ***', self.units
-            profit = self.sl3+.00025
-            loss = self.sl2+.00025
-            return self.units, profit, loss 
+            #print '*** Short SL1_SL2 ***', self.units
+            loss = self.sl2 + .00025
+            return self.units, loss 
         
         elif (
                 self.mid < self.sl3 and self.units is not None and \
                 self.units > 0
             ):
-            print '*** Long SL3 Breakout ***', self.units
-            profit = self.bid - .002
+            #print '*** Long SL3 Breakout ***', self.units
             loss = self.sl3
-            return self.units, profit, loss
+            return self.units, loss
         
         elif (
                 self.mid < self.sl3 and self.units is not None and \
                 self.units < 0
             ):
-            print '*** Short RL3 Breakout ***', self.units
-            profit = self.sl3
+            #print '*** Short RL3 Breakout ***', self.units
             loss = self.ask + .001
-            return self.units, profit, loss
+            return self.units, loss
         
         else:
             return None
