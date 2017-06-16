@@ -61,7 +61,7 @@ def main():
     response = api.pricing.stream(account_id, snapshot=args.snapshot,
                                   instruments=",".join(args.instrument))
 
-    dfD = PivotImports(sys.argv[2], datetime.now().date()).daily()
+    dfD = PivotImports(sys.argv[2]).daily()
     # dfW = p.weekly()
     balance = Balance(account_api, account_id).balance()
 
