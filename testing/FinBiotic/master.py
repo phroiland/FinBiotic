@@ -7,7 +7,6 @@ Created on Mon May 29 13:30:38 2017
 """
 
 import sys
-# Standard Imports
 import argparse
 
 import oandapyV20
