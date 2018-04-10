@@ -8,21 +8,19 @@ Created on Mon May 29 13:30:38 2017
 
 import sys
 import os
-import os.path
 import settings
 import argparse
 import pandas as pd
-pd.set_option('display.large_repr', 'truncate')
-pd.set_option('display.max_columns', 0)
 import common.config
 import common.args
 from candlePrinter import CandlePrinter
 from sessionCandles import Candles
 from pivots import Pivots
+pd.set_option('display.large_repr', 'truncate')
+pd.set_option('display.max_columns', 0)
 
 
 def main():
-
     candle_parser = argparse.ArgumentParser()
 
     common.config.add_argument(candle_parser)
@@ -43,7 +41,7 @@ def main():
 
     # parser.set_defaults(mid=False, bid=False, ask=False)
 
-    candle_parser.add_argument("--granularity", default='H',
+    candle_parser.add_argument("--granularity", default='H1',
                                help="The candles granularity to fetch")
 
     candle_parser.add_argument("--from-time", default=None,
@@ -74,7 +72,7 @@ def main():
         kwargs["toTime"] = candle_api.datetime_to_str(candle_args.to_time)
 
     candle_response = candle_api.instrument.candles(
-            candle_args.instrument, **kwargs)
+        candle_args.instrument, **kwargs)
 
     if candle_response.status != 200:
         print(candle_response)
@@ -99,13 +97,12 @@ def main():
 
     globalDF = globalDF[['Time', 'Hour', 'Open', 'High', 'Low', 'Close']]
     pair = sys.argv[1]
-    globalDF.to_csv(os.path.join(
-                settings.CSV_DIR, "%s_%s.csv" % (pair, 'Minute')), index=False)
-    # print minuteDF.tail(), '\n'
+    globalDF.to_csv(os.path.join(settings.CSV_DIR, '%s_%s.csv' % (pair, 'Hourly')), index=False)
+    print(globalDF.tail())
 
     # Calculate Pivot Points, Resistance, and Support Lines
-    pair = sys.argv[1]
     Pivots(globalDF, pair)
+
 
 if __name__ == "__main__":
     main()

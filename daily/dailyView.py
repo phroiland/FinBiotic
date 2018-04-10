@@ -2,6 +2,7 @@
 
 from datetime import datetime
 
+
 class CandlePrinter(object):
     def __init__(self):
         self.width = {
