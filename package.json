@@ -1,0 +1,29 @@
+{
+  "name": "FinBiotic",
+  "version": "1.0.0",
+  "description": "**FinBiotic** _is a python wrapper program that takes in streaming Forex data; computes breakouts, pivot points,  and position sizes to execute trades on the [Oanda](https://www.oanda.com/) trading platform._",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack  --progress --display-error-details",
+    "start": "webpack-dev-server --progress --colors --inline --content-base build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phroiland/FinBiotic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phroiland/FinBiotic/issues"
+  },
+  "homepage": "https://github.com/phroiland/FinBiotic#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
+  }
+}

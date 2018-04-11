@@ -97,7 +97,7 @@ def main():
 
     globalDF = globalDF[['Time', 'Hour', 'Open', 'High', 'Low', 'Close']]
     pair = sys.argv[1]
-    globalDF.to_csv(os.path.join(settings.CSV_DIR, '%s_%s.csv' % (pair, 'Hourly')), index=False)
+    globalDF.to_csv(os.path.join(settings.CSV_DIR, '%s_%s.csv' % (pair, 'Daily')), index=False)
     print(globalDF.tail())
 
     # Calculate Pivot Points, Resistance, and Support Lines
