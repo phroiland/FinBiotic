@@ -31,7 +31,7 @@ class Yen(object):
     def breakout(self):
         try:
             b = Breakout(self.data, self.mid)
-            breakout = b.breakout()
+            breakout = b.breakout
             return breakout
         except Exception as e:
             print e
