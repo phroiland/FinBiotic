@@ -1,5 +1,10 @@
-require('./css/main.css')
 
-var element = document.createElement('h1');
-element.innerHTML = 'FinBiotic';
-document.body.appendChild(element);
+require('bootstrap/dist/css/bootstrap.min.css');
+require('./css/main.css');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ManageCurrencyPair from './ManageCurrencyPair.js';
+ReactDOM.render(
+  <ManageCurrencyPair />,
+  document.getElementById('app')
+);

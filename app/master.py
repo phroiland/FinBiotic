@@ -92,7 +92,6 @@ def main():
 
             if sd.minuteData().shape[0] < 20:
                 continue
-
             else:
                 client = oandapyV20.API(settings.ACCESS_TOKEN)
                 r = openPos.OpenPositions(accountID=account_id)
@@ -102,7 +101,6 @@ def main():
                     Declare array to store open trades so multiple positions aren't established on a single currency.
                 '''
                 openTrades = []
-
                 for i in r.response['positions']:
                     trades = i['instrument']
                     openTrades.append(trades)
@@ -110,18 +108,16 @@ def main():
 
                 if instrument_string(msg) in openTrades:
                     continue
-
                 else:
                     try:
                         breakout = Breakout(sd.minuteData(), mid_string(msg))
-                        breakout_units = breakout.breakout()
+                        breakout_units = breakout.breakout
                         if breakout_units is None:
                             continue
                         else:
                             spread = Spreads(dfD, mid_string(msg))
                             pivot, rl1, rl2, rl3, sl1, sl2, sl3 = spread.spreads()
                             rate1, rate2 = spread.spreadRates()
-
                             strategy = Strategy(
                                 instrument_string(msg), dfD, mid_string(msg), breakout_units,
                                 pivot, rl1, rl2, rl3, sl1, sl2, sl3, rate1, rate2
@@ -131,13 +127,11 @@ def main():
                                 continue
                             else:
                                 units, stop_loss, profit = strategy.resistance_check()
-
                                 try:
                                     resistance_execute = Execute(
                                         account_api, account_id, instrument_string(msg), units, stop_loss, profit
                                     )
                                     resistance_execute.trade()
-
                                 except Exception as e:
                                     print(e)
 
@@ -145,13 +139,11 @@ def main():
                                 continue
                             else:
                                 units, stop_loss, profit = strategy.support_check()
-
                                 try:
                                     support_execute = Execute(
                                         account_api, account_id, instrument_string(msg), units, stop_loss, profit
                                     )
                                     support_execute.trade()
-
                                 except Exception as e:
                                     print(e)
 
