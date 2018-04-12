@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="806a4937-450b-497a-aa7f-f4c94b80596b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/CurrencyPairList.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/MarketList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ManageCurrencyPair.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/ManageMarket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ModifyCurrencyPair.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/ModifyMarket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/NewCurrencyPair.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/NewMarket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/strategy/resistance.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/strategy/resistance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="806a4937-450b-497a-aa7f-f4c94b80596b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +10,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="master.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/master.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12">
+              <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+              <folding>
+                <element signature="e#114#124#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resistance.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/strategy/resistance.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -151,6 +160,12 @@
               <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="execute" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
@@ -515,9 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -563,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/strategy/resistance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/execute/execute.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -579,11 +584,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/master.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="12">
           <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
           <folding>
             <element signature="e#114#124#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/strategy/resistance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
         </state>
       </provider>
     </entry>
