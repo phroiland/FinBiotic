@@ -113,7 +113,7 @@ def main():
                         breakout = Breakout(sd.minuteData(), mid_string(msg))
                         breakout_units = breakout.breakout()
                         if breakout_units is None:
-                            continue
+                            pass
                         else:
                             spread = Spreads(dfD, mid_string(msg))
                             pivot, rl1, rl2, rl3, sl1, sl2, sl3 = spread.spreads()
