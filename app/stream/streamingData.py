@@ -84,10 +84,6 @@ class StreamingData(object):
                            'Risk Adj Units']].mean(axis=1).astype(int)
             if self.data['Units'] > int(250000):
                 self.data['Units'] = int(250000)
-            elif self.data['Units'] < int(-250000):
-                self.data['Units'] = int(-250000)
-            else:
-                self.data['Units'] = self.data['Units']
         except:
             self.data['Units'] = int(100000)
 

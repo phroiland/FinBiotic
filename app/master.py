@@ -111,7 +111,7 @@ def main():
                 else:
                     try:
                         breakout = Breakout(sd.minuteData(), mid_string(msg))
-                        breakout_units = breakout.breakout
+                        breakout_units = breakout.breakout()
                         if breakout_units is None:
                             continue
                         else:
