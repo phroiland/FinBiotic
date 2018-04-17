@@ -9,6 +9,7 @@ import settings
 import os
 import os.path
 import pandas as pd
+
 pd.set_option('display.large_repr', 'truncate')
 pd.set_option('display.max_columns', 0)
 

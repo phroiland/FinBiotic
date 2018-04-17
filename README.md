@@ -42,7 +42,7 @@ and follow the instructions.
 **Get Pivot Point, Resistance, and Support Levels**
 
     (finbiotic) user@host:~/FinBiotic$ python daily/dailyStream.py EUR_USD --granularity D 
-
+        
 (_default granularity is H1_)
 
 **Run the Application**

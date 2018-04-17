@@ -1,5 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
+from __future__ import print_function
+
 """
 Created on Wed May 31 21:17:12 2017
 
@@ -25,9 +27,9 @@ class Execute(object):
         values = response.get('orderFillTransaction').__dict__.values()
         orderFill = zip(keys, values)
 
-        print orderFill[6]
-        print "Response: {} ({})".format(response.status, response.reason)
-        print ""
+        print(orderFill[6])
+        print("Response: {} ({})".format(response.status, response.reason))
+        print("")
         print_order_create_response_transactions(response)
 
         profit_response = self.api.order.take_profit(
@@ -35,8 +37,8 @@ class Execute(object):
                 price=self.profit
         )
 
-        print "Profit Response: {} ({})".format(profit_response.status, profit_response.reason)
-        print ""
+        print("Profit Response: {} ({})".format(profit_response.status, profit_response.reason))
+        print("")
         print_order_create_response_transactions(profit_response)
 
         stop_response = self.api.order.stop_loss(
@@ -44,6 +46,6 @@ class Execute(object):
                 price=self.stop_loss
         )
 
-        print "Stop Loss Response: {} ({})".format(stop_response.status, stop_response.reason)
-        print ""
+        print("Stop Loss Response: {} ({})".format(stop_response.status, stop_response.reason))
+        print("")
         print_order_create_response_transactions(stop_response)

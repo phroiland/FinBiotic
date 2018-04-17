@@ -1,0 +1,9 @@
+<h1>{{ order.order_text }}</h1>
+
+<ul>
+{% for fill in order.fill_set.all %}
+    <li>{{ fill.fill_text }} -- {{ fill.units }} units{{ fill.units|pluralize }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'currencies:detail' order.id %}">Order again?</a>

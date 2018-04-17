@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="806a4937-450b-497a-aa7f-f4c94b80596b" name="Default" comment="" />
+    <list default="true" id="806a4937-450b-497a-aa7f-f4c94b80596b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/finbiotic/currencies/static/currencies/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finbiotic/currencies/templates/currencies/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finbiotic/currencies/templates/currencies/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finbiotic/currencies/templates/currencies/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finbiotic/currencies/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finbiotic/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/master.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/master.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daily/dailyStream.py" beforeDir="false" afterPath="$PROJECT_DIR$/daily/dailyStream.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,36 +22,94 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/finbiotic/currencies/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finbiotic/currencies/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finbiotic/currencies/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finbiotic/currencies/templates/currencies/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finbiotic/currencies/templates/currencies/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="results.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finbiotic/currencies/templates/currencies/results.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finbiotic/currencies/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&amp;</find>
-      <find>loss</find>
-      <find>set_SIGNAL_HANDLER</find>
-      <find>set_signal_handler</find>
-      <find>button</find>
-      <find>userid</find>
-      <find>userId</find>
-      <find>user</find>
-      <find>Account</find>
-      <find>account</find>
-      <find>Market</find>
-      <find>PairI</find>
-      <find>web</find>
-      <find>Curre</find>
-      <find>Currency</find>
-      <find>currency</find>
-      <find>currencyPair</find>
-      <find>Currency Pair</find>
       <find>CurrencyPair</find>
       <find>Pair</find>
       <find>Pair ID</find>
@@ -52,11 +122,30 @@
       <find>Order</find>
       <find>order</find>
       <find>OrderType</find>
+      <find>poll</find>
+      <find>pol</find>
+      <find>polls</find>
+      <find>was_published_recently</find>
+      <find>Question</find>
+      <find>Choice</find>
+      <find>pub_date</find>
+      <find>question</find>
+      <find>choice</find>
+      <find>OrderCreate</find>
+      <find>order_create</find>
+      <find>OrderFill</find>
+      <find>order_fill</find>
+      <find>Creates</find>
+      <find>Create</find>
+      <find>create</find>
+      <find>type of order order</find>
+      <find>currencies_fill</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/FinBiotic</dir>
       <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/app</dir>
+      <dir>$PROJECT_DIR$/finbiotic/currencies</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -65,37 +154,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/FinBiotic/stream/view.py" />
-        <option value="$PROJECT_DIR$/FinBiotic/master.py" />
-        <option value="$PROJECT_DIR$/daily/dailyView.py" />
-        <option value="$PROJECT_DIR$/daily/settings.py" />
-        <option value="$PROJECT_DIR$/app/stream/view.py" />
-        <option value="$PROJECT_DIR$/app/execute/order_response.py" />
-        <option value="$PROJECT_DIR$/app/pivots/pivots.py" />
-        <option value="$PROJECT_DIR$/app/pivots/pivotImports.py" />
-        <option value="$PROJECT_DIR$/app/execute/execute.py" />
-        <option value="$PROJECT_DIR$/app/strategy/strategy.py" />
-        <option value="$PROJECT_DIR$/app/strategy/support.py" />
-        <option value="$PROJECT_DIR$/app/strategy/spreads.py" />
-        <option value="$PROJECT_DIR$/configure.py" />
-        <option value="$PROJECT_DIR$/app/configure.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/daily/dailyStream.py" />
-        <option value="$USER_HOME$/oanda-py3/lib/python3.5/site-packages/urwid/main_loop.py" />
-        <option value="$USER_HOME$/oandapyV20-examples/src/oanda_console.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/main.css" />
-        <option value="$PROJECT_DIR$/.babelrc" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/app/strategy/breakout.py" />
         <option value="$PROJECT_DIR$/app/ManageAccounts.js" />
         <option value="$PROJECT_DIR$/app/ModifyAccount.js" />
         <option value="$PROJECT_DIR$/app/NewAccount.js" />
         <option value="$PROJECT_DIR$/app/AccountList.js" />
         <option value="$PROJECT_DIR$/app/css/main.css" />
         <option value="$PROJECT_DIR$/app/stream/streamingData.py" />
-        <option value="$PROJECT_DIR$/app/master.py" />
         <option value="$PROJECT_DIR$/app/NewMarket.backup" />
         <option value="$PROJECT_DIR$/app/MarketsList.js" />
         <option value="$PROJECT_DIR$/app/Filter.js" />
@@ -113,6 +177,34 @@
         <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/app/MarketList.js" />
         <option value="$PROJECT_DIR$/app/strategy/resistance.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/execute/order_response.py" />
+        <option value="$PROJECT_DIR$/app/execute/execute.py" />
+        <option value="$PROJECT_DIR$/daily/pivots.py" />
+        <option value="$PROJECT_DIR$/daily/dailyView.py" />
+        <option value="$PROJECT_DIR$/daily/.gitignore" />
+        <option value="$PROJECT_DIR$/app/execute/.gitignore" />
+        <option value="$PROJECT_DIR$/app/strategy/.gitignore" />
+        <option value="$PROJECT_DIR$/app/pivots/.gitignore" />
+        <option value="$PROJECT_DIR$/app/common/.gitignore" />
+        <option value="$PROJECT_DIR$/app/charting/.gitignore" />
+        <option value="$PROJECT_DIR$/app/account/.gitignore" />
+        <option value="$PROJECT_DIR$/finbiotic/finbiotic/urls.py" />
+        <option value="$PROJECT_DIR$/finbiotic/currencies/static/currencies/style.css" />
+        <option value="$PROJECT_DIR$/finbiotic/templates/admin/base_site.html" />
+        <option value="$PROJECT_DIR$/finbiotic/templates/admin/index.html" />
+        <option value="$PROJECT_DIR$/finbiotic/finbiotic/settings.py" />
+        <option value="$PROJECT_DIR$/app/master.py" />
+        <option value="$PROJECT_DIR$/daily/dailyStream.py" />
+        <option value="$PROJECT_DIR$/finbiotic/currencies/tests.py" />
+        <option value="$PROJECT_DIR$/finbiotic/currencies/templates/currencies/index.html" />
+        <option value="$PROJECT_DIR$/finbiotic/currencies/admin.py" />
+        <option value="$PROJECT_DIR$/finbiotic/currencies/templates/currencies/results.html" />
+        <option value="$PROJECT_DIR$/finbiotic/currencies/views.py" />
+        <option value="$PROJECT_DIR$/finbiotic/currencies/urls.py" />
+        <option value="$PROJECT_DIR$/finbiotic/currencies/templates/currencies/detail.html" />
+        <option value="$PROJECT_DIR$/finbiotic/currencies/models.py" />
       </list>
     </option>
   </component>
@@ -127,6 +219,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -137,35 +230,91 @@
             <path>
               <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="finbiotic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="stream" type="462c0819:PsiDirectoryNode" />
+              <item name="finbiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="currencies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="finbiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="currencies" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="finbiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="currencies" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="finbiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="currencies" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="currencies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="finbiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="currencies" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="finbiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="currencies" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="currencies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="finbiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="finbiotic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="finbiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinBiotic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinBiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="finbiotic" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$USER_HOME$/oandapyV20-examples/src/oanda_console.py" />
+    <property name="last_opened_file_path" value="$USER_HOME$/finbioticDjango" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/daily" />
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/app/pivots" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/css" />
       <recent name="$PROJECT_DIR$/testing" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/finbiotic" />
+      <recent name="$PROJECT_DIR$/daily" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/pivots" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -195,250 +344,31 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="-17" width="1885" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50107294" side_tool="true" weight="0.34867075" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50107294" side_tool="true" weight="0.34867075" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32924336" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49892703" visible="true" weight="0.34867075" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49892703" visible="true" weight="0.400818" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50107294" side_tool="true" weight="0.34867075" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32924336" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49892703" visible="true" weight="0.34867075" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/MarketList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/master.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
-          <folding>
-            <element signature="e#114#124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pivots/pivotImports.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/master.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/daily/candlePrinter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1037" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1247972723/sys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="394" selection-start-line="394" selection-end-line="394" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pivots.py" />
-    <entry file="file:///usr/lib/python2.7/os.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="445" column="16" selection-start-line="445" selection-start-column="16" selection-end-line="445" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/csv/EUR_USD_Hourly.csv" />
-    <entry file="file://$PROJECT_DIR$/daily/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/daily/pivots.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-660">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/execute/order_response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/strategy/yen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pivots/pivotImports.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="30" column="8" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pivots/pivots.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="115" column="64" lean-forward="true" selection-start-line="115" selection-start-column="64" selection-end-line="115" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/strategy/support.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1488">
-          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/configure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="12">
-            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/oanda-py3/lib/python3.5/site-packages/urwid/main_loop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="154" column="60" lean-forward="true" selection-start-line="154" selection-start-column="60" selection-end-line="154" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/oandapyV20-examples/src/oanda_console.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="369" column="8" lean-forward="true" selection-start-line="369" selection-start-column="8" selection-end-line="369" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/urwid_geventloop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="70" column="19" lean-forward="true" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="71" lean-forward="true" selection-start-column="71" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NewMarket.backup" />
-    <entry file="file://$PROJECT_DIR$/app/Filter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -478,27 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="865">
           <caret line="118" column="104" selection-start-line="118" selection-start-column="104" selection-end-line="118" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/daily/dailyView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/daily/dailyStream.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="95" column="32" lean-forward="true" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -544,13 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/execute/execute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/ManageMarket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="590">
@@ -565,12 +467,273 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/master.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="528">
+            <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/configure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daily/pivots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="137" column="14" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
+          <folding>
+            <element signature="e#113#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daily/dailyView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daily/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12">
-          <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/execute/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/strategy/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pivots/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/charting/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/account/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/currencies/templates/currencies/idnex.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/templates/db.sqlite3">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/db.sqlite3">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/execute/order_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daily/dailyCandles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/master.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
           <folding>
             <element signature="e#114#124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daily/dailyStream.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/execute/execute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/finbiotic/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="710">
+          <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/finbiotic/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="e#643#684#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/currencies/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1142">
+          <caret line="126" column="56" selection-start-line="126" selection-start-column="56" selection-end-line="126" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/templates/admin/base_site.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/templates/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/currencies/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/currencies/static/currencies/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/currencies/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/currencies/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/currencies/templates/currencies/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/currencies/templates/currencies/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/currencies/templates/currencies/results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/currencies/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finbiotic/currencies/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
