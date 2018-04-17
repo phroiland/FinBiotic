@@ -1,0 +1,13 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'currencies/style.css' %}" />
+
+{% if latest_order_list %}
+    <ul>
+    {% for order in latest_order_list %}
+        <li><a href="{% url 'currencies:detail' order.id %}">{{ order.order_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No currencies are available.</p>
+{% endif %}

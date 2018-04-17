@@ -74,7 +74,7 @@ def main():
         if msg_type == "pricing.Price":
             sd = StreamingData(datetime.now(), instrument_string(msg),
                                mid_string(msg), account_api, account_id, 's',
-                               '1min', balance)
+                               '1s', balance)
             df = df.append(sd.df())
             '''
                 Re-sample is based on time parameter set in StreamingData().
