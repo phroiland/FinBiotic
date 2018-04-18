@@ -2,11 +2,11 @@
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form action="{% url 'currencies:vote' order.id %}" method="post">
+<form action="{% url 'currencies:units' order.id %}" method="post">
 {% csrf_token %}
 {% for fill in order.fill_set.all %}
     <input type="radio" name="fill" id="fill{{ forloop.counter }}" value="{{ fill.id }}" />
-    <label for="fill{{ forloop.counter }}">{{ fill.fill_text }}</label><br />
+    <label for="fill{{ forloop.counter }}">{{ fill.fill_text }}</label> <tt>{{ fill.price }}</tt> <br />
 {% endfor %}
 <input type="submit" value="Units" />
 </form>

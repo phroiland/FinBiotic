@@ -6,6 +6,9 @@ Created on Wed May 31 21:17:12 2017
 @author: jonfroiland
 """
 import pandas as pd
+import os
+
+CSV_DIR = os.environ.get('CSV_DIR', None)
 
 pd.set_option('display.large_repr', 'truncate')
 pd.set_option('display.max_columns', 0)
@@ -94,4 +97,5 @@ class StreamingData(object):
                                 '20 High Close', '50 High Close',
                                 '20 Low Close', '50 Low Close', 'True Range',
                                 'N', 'Account', '$Volatility', 'Units']]
+
         return minuteData
