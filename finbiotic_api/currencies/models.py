@@ -26,6 +26,7 @@ class Fill(models.Model):
     time = models.DateTimeField('Time')
     fill_text = models.CharField(verbose_name='Stop Loss, Take Profit', max_length=200)
     price = models.DecimalField(max_digits=6, decimal_places=5)
+    units = models.IntegerField(default=0)
 
     def __str__(self):
         return self.fill_text

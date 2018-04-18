@@ -48,6 +48,7 @@ def units(request, order_id):
             'error_message': "You didn't select an order fill type.",
         })
     else:
+        selected_fill.units += 100000
         selected_fill.save()
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
