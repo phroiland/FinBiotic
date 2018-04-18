@@ -69,12 +69,12 @@ def main():
 
     for msg_type, msg in response.parts():
         if msg_type == 'pricing.Heartbeat' and args.show_heartbeats:
-            print heartbeat_to_string(msg)
+            print(heartbeat_to_string(msg))
 
         if msg_type == "pricing.Price":
             sd = StreamingData(datetime.now(), instrument_string(msg),
                                mid_string(msg), account_api, account_id, 's',
-                               '1min', balance)
+                               '1s', balance)
             df = df.append(sd.df())
             '''
                 Re-sample is based on time parameter set in StreamingData().
@@ -88,7 +88,7 @@ def main():
                     sd.shape[0]: represents the current/cumulative rows related to the time frame being evaluated.
             '''
             # print "df:", df.shape[0], "minuteData:", sd.minuteData().shape[0]
-            # print sd.minuteData(), '\n'
+            print sd.minuteData(), '\n'
 
             if sd.minuteData().shape[0] < 20:
                 continue
@@ -104,7 +104,7 @@ def main():
                 for i in r.response['positions']:
                     trades = i['instrument']
                     openTrades.append(trades)
-                print 'Open Trades', openTrades
+                print('Open Trades', openTrades)
 
                 if instrument_string(msg) in openTrades:
                     continue

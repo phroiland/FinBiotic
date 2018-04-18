@@ -6,27 +6,26 @@ from datetime import datetime
 class CandlePrinter(object):
     def __init__(self):
         self.width = {
-            'time' : 8,
-            'type' : 8,
-            'price' : 8,
-            'volume' : 8,
+            'time': 8,
+            'type': 8,
+            'price': 8,
+            'volume': 8,
         }
         # setattr(self.width, "time", 19)
         self.time_width = 8
 
-
     def print_header(self):
         
-        print("{:<{width[time]}} {:<{width[type]}} {:<{width[price]}} {:<{width[price]}} {:<{width[price]}} {:<{width[price]}} {:<{width[volume]}}".format(
-            "Time",
-            "Type",
-            "Open",
-            "High",
-            "Low",
-            "Close",
-            "Volume",
-            width=self.width
-        ))
+        print("{:<{width[time]}} {:<{width[type]}} {:<{width[price]}} {:<{width[price]}} "
+              "{:<{width[price]}} {:<{width[price]}} {:<{width[volume]}}".format(
+                "Time",
+                "Type",
+                "Open",
+                "High",
+                "Low",
+                "Close",
+                "Volume",
+                width=self.width))
 
         print("{} {} {} {} {} {} {}".format(
             "=" * self.width['time'],
@@ -62,16 +61,16 @@ class CandlePrinter(object):
             if c is None:
                 continue
             
-            print("{:>{width[time]}} {:>{width[type]}} {:>{width[price]}} {:>{width[price]}} {:>{width[price]}} {:>{width[price]}} {:>{width[volume]}}".format(
-                time,
-                price,
-                c.o,
-                c.h,
-                c.l,
-                c.c,
-                volume,
-                width=self.width
-            ))
+            print("{:>{width[time]}} {:>{width[type]}} {:>{width[price]}} {:>{width[price]}} "
+                  "{:>{width[price]}} {:>{width[price]}} {:>{width[volume]}}".format(
+                    time,
+                    price,
+                    c.o,
+                    c.h,
+                    c.l,
+                    c.c,
+                    volume,
+                    width=self.width))
             
             volume = ""
             time = ""
@@ -87,13 +86,11 @@ class CandlePrinter(object):
 
             if c is None:
                 continue
-            
+
             return "{:>{width[time]}}".format(
                 time,
                 width=self.width
             )
-            
-            time = ""
 
     def print_open(self, candle):
         for price in ["mid", "bid", "ask"]:
