@@ -2,7 +2,7 @@
 
 <ul>
 {% for fill in order.fill_set.all %}
-    <li>{{ fill.fill_text }} -- {{ fill.units }} units{{ fill.units|pluralize }}</li>
+    <li>{{ fill.fill_text }} -- {{ fill.units }} units</li>
     {% endfor %}
 </ul>
 
