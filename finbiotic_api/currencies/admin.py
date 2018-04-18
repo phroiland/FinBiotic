@@ -5,7 +5,7 @@ from .models import Fill, Order
 
 class FillInline(admin.TabularInline):
     model = Fill
-    extra = 2
+    extra = 0
 
 
 class OrderAdmin(admin.ModelAdmin):
