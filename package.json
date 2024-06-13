@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "stop": "^3.1.0"
   }
 }
