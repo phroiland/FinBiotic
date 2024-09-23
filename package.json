@@ -33,7 +33,7 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^5.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "stop": "^3.1.0"
